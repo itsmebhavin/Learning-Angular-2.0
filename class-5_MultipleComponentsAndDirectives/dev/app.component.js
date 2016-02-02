@@ -26,9 +26,8 @@ System.register(['angular2/core', './contacts/contact-list.component'], function
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        template: "\n      <h3>Angular2 Boilerplate</h3>\n      <br/>\n      <contact-list></contact-list>\n      <!-- <div>\n        Email Address: {{selectedContact.email}}\n      </div>\n      -->\n    ",
-                        directives: [contact_list_component_1.ContactListComponent],
-                        styleUrls: ["../src/css/app.css"]
+                        template: "\n      <h3>Angular2 Boilerplate</h3>\n      <br/>\n      <contact-list></contact-list>\n    ",
+                        directives: [contact_list_component_1.ContactListComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

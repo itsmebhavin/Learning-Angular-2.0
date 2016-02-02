@@ -7,13 +7,8 @@ import {ContactListComponent} from './contacts/contact-list.component';
       <h3>Angular2 Boilerplate</h3>
       <br/>
       <contact-list></contact-list>
-      <!-- <div>
-        Email Address: {{selectedContact.email}}
-      </div>
-      -->
     `,
-    directives:[ContactListComponent],
-    styleUrls:["../src/css/app.css"]
+    directives:[ContactListComponent]
 })
 export class AppComponent {
 
