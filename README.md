@@ -17,7 +17,7 @@
 #### 13. HTTP (Get, Post to RESTFul services)
 #### 14. Pipes
 #### 15. Input /Output
-#### Practice. ToDO App
+#### Practice. ToDO App (In progress and not yet finished)
 ------
 ##### Author
 ###### Bhavin Patel
