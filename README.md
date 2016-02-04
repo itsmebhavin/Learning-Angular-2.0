@@ -11,15 +11,15 @@
 #### 5. Multiple componenets and ngFor directive usage
 #### 6. Services (templateUrl, Lifecycle hooks, interface, injectable)
 #### 7. Two-way data binding
-#### 8. Routing
-#### 9. Data with Service and Routing together
-#### 10. Routing with Parameters
-#### 11. Forms with Two-way data binding
-#### 12. Forms with FormsBuilder
-#### 13. HTTP (Get, Post to RESTFul services)
-#### 14. Pipes
-#### 15. Input /Output
-#### Practice. ToDO App (In progress and not yet finished)
+#### 8. Routing   (Coming Soon)
+#### 9. Data with Service and Routing together   (Coming Soon)
+#### 10. Routing with Parameters   (Coming Soon)
+#### 11. Forms with Two-way data binding   (Coming Soon)
+#### 12. Forms with FormsBuilder   (Coming Soon)
+#### 13. HTTP (Get, Post to RESTFul services)   (Coming Soon)
+#### 14. Pipes   (Coming Soon)
+#### 15. Input /Output   (Coming Soon)
+#### Practice. ToDO App (In progress and not yet finished)   (under progress)
 ------
 ##### Author
 ###### Bhavin Patel
