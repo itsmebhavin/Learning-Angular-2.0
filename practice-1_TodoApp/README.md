@@ -22,4 +22,4 @@ npm start
 gulp
 ```
 
-# UNDER CONTRUCTION *******
+# ******* UNDER CONTRUCTION *******
