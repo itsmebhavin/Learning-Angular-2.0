@@ -1,6 +1,8 @@
 #### Angular 2.0 2016 Learning Series
 (inspired from original Mindspace video series at https://www.youtube.com/playlist?list=PL55RiY5tL51olfU2IEqr455EYLkrhmh3n)
 
+###### **** Under Development ****
+
 ### Chapters
 #### 1. Introduction
 #### 2. Architectural information
