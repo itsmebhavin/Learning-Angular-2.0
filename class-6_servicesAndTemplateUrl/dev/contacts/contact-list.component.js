@@ -1,4 +1,4 @@
-System.register(["angular2/core", "./contact.component"], function(exports_1) {
+System.register(["angular2/core", "./contact.component", "./contact.service"], function(exports_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,7 +9,7 @@ System.register(["angular2/core", "./contact.component"], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, contact_component_1;
+    var core_1, contact_component_1, contact_service_1;
     var ContactListComponent;
     return {
         setters:[
@@ -18,32 +18,39 @@ System.register(["angular2/core", "./contact.component"], function(exports_1) {
             },
             function (contact_component_1_1) {
                 contact_component_1 = contact_component_1_1;
+            },
+            function (contact_service_1_1) {
+                contact_service_1 = contact_service_1_1;
             }],
         execute: function() {
             ContactListComponent = (function () {
                 //info: if you want to pre-select first element from contact list then
                 //      you can define constructor on this class and initialize defaults.
-                function ContactListComponent() {
-                    this.contacts = [
-                        { firstname: "Max", lastname: "Smith", email: "max@gmail.com" },
-                        { firstname: "Chris", lastname: "Raches", email: "chris@gmail.com" },
-                        { firstname: "Michael", lastname: "Alloy", email: "michael@gmail.com" },
-                        { firstname: "John", lastname: "Doe", email: "john@gmail.com" },
-                    ];
+                //this is same as
+                // private contactService : ContactService
+                // this.contactService = contactService;
+                function ContactListComponent(_contactService) {
+                    this._contactService = _contactService;
                     this.selectedContact = {};
-                    this.selectedContact = this.contacts[0];
+                    this.getContacts();
                 }
                 ContactListComponent.prototype.onNameClick = function (contact) {
                     this.selectedContact = contact;
+                };
+                // Call service now
+                ContactListComponent.prototype.getContacts = function () {
+                    var _this = this;
+                    this._contactService.getContacts().then(function (contacts) { return _this.contacts = contacts; });
                 };
                 ContactListComponent = __decorate([
                     core_1.Component({
                         selector: "contact-list",
                         templateUrl: "../dev/contacts/contact-list.component.html",
                         directives: [contact_component_1.ContactComponent],
+                        providers: [contact_service_1.ContactService],
                         styleUrls: ["../src/css/app.css"]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [contact_service_1.ContactService])
                 ], ContactListComponent);
                 return ContactListComponent;
             }());

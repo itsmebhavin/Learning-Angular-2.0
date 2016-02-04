@@ -1,27 +1,34 @@
 import {Component} from "angular2/core";
 import {ContactComponent} from "./contact.component";
+import {ContactService} from "./contact.service";
+import {Contact} from "./contact";
 
 @Component({
   selector: "contact-list",
   templateUrl: "../dev/contacts/contact-list.component.html",
   directives: [ContactComponent],
+  providers:[ContactService],
   styleUrls:["../src/css/app.css"]
 })
 export class ContactListComponent{
-  public contacts =
-  [
-    {firstname : "Max" , lastname:"Smith", email:"max@gmail.com"},
-    {firstname : "Chris" , lastname:"Raches", email:"chris@gmail.com"},
-    {firstname : "Michael" , lastname:"Alloy", email:"michael@gmail.com"},
-    {firstname : "John" , lastname:"Doe", email:"john@gmail.com"},
-  ];
+  public contacts : Contact[];
+
   public selectedContact = {};
+
   public onNameClick(contact){
         this.selectedContact = contact;
   }
   //info: if you want to pre-select first element from contact list then
   //      you can define constructor on this class and initialize defaults.
-  constructor(){
-    this.selectedContact = this.contacts[0];
+  //this is same as
+  // private contactService : ContactService
+  // this.contactService = contactService;
+  constructor(private _contactService: ContactService){
+      this.getContacts();
+  }
+
+  // Call service now
+  getContacts(){
+    this._contactService.getContacts().then((contacts:Contact[])=>this.contacts = contacts);
   }
 }
