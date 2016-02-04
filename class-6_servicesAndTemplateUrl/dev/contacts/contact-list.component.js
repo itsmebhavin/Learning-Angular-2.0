@@ -42,6 +42,9 @@ System.register(["angular2/core", "./contact.component", "./contact.service"], f
                     var _this = this;
                     this._contactService.getContacts().then(function (contacts) { return _this.contacts = contacts; });
                 };
+                ContactListComponent.prototype.ngOnInit = function () {
+                    this.getContacts();
+                };
                 ContactListComponent = __decorate([
                     core_1.Component({
                         selector: "contact-list",

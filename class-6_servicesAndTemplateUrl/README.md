@@ -8,5 +8,6 @@
       - define data class
       - define service class
       - inject service class in contact-list component
-      - call service method (q-promise)
+      - call service method in constructor(q-promise)
+      - call service method using lifecycle hooks
   - and some final minor plumbing
