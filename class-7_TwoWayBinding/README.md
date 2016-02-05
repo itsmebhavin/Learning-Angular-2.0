@@ -2,6 +2,7 @@
 
 - in this chapter, we will learn
   - how to do two-way data binding for contact form
+  - discussion about basic form setup
   - and some final minor updates for styles and etc.
 
 ### Some information about angular2 data binding
