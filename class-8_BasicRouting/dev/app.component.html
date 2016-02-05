@@ -3,12 +3,13 @@
   <h3>Router Demo</h3>
   <br/>
   <!-- <contact-list></contact-list> -->
-    <section>
+    <header class="main">
       <nav>
         <a [routerLink]="['Contacts']">Contacts</a>
+        <a [routerLink]="['Newcontact']">NewContact</a>
         <a [routerLink]="['About']">About</a>
       </nav>
 
       <router-outlet></router-outlet>
-  </section>
+  </header>
 </div>

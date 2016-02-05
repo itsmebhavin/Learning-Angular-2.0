@@ -1,4 +1,4 @@
-System.register(['angular2/core', './contacts/contact-list.component', './about/about.component', 'angular2/router'], function(exports_1) {
+System.register(['angular2/core', './contacts/contact-list.component', './about/about.component', './contacts/newcontact.component', 'angular2/router'], function(exports_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,7 +9,7 @@ System.register(['angular2/core', './contacts/contact-list.component', './about/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, contact_list_component_1, about_component_1, router_1;
+    var core_1, contact_list_component_1, about_component_1, newcontact_component_1, router_1;
     var AppComponent;
     return {
         setters:[
@@ -21,6 +21,9 @@ System.register(['angular2/core', './contacts/contact-list.component', './about/
             },
             function (about_component_1_1) {
                 about_component_1 = about_component_1_1;
+            },
+            function (newcontact_component_1_1) {
+                newcontact_component_1 = newcontact_component_1_1;
             },
             function (router_1_1) {
                 router_1 = router_1_1;
@@ -38,7 +41,8 @@ System.register(['angular2/core', './contacts/contact-list.component', './about/
                         directives: [router_1.ROUTER_DIRECTIVES]
                     }),
                     router_1.RouteConfig([
-                        { path: '/', component: contact_list_component_1.ContactListComponent, name: 'Contacts' },
+                        { path: '/', component: contact_list_component_1.ContactListComponent, name: 'Contacts', useAsDefault: true },
+                        { path: '/new', component: newcontact_component_1.NewContactComponent, name: 'Newcontact' },
                         { path: '/about', component: about_component_1.AboutComponent, name: 'About' }
                     ]), 
                     __metadata('design:paramtypes', [])

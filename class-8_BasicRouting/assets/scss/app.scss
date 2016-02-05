@@ -4,6 +4,20 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
 }
+.main, header nav{
+  width:75%;
+  margin: 32px auto;
+}
+header nav a {
+  color : #233dcb;
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav a:hover,
+header nav a:active{
+  color:red;
+  text-decoration: underline;
+}
 ul{
   list-style: none;
   margin: 16px 0;
