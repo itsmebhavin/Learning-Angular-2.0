@@ -23,3 +23,29 @@ two-way
 bindon-target = "expression"
 ```
 - General binding types are like - Property, Event, Two-way, Attribute, Class, Style etc.
+
+### Component configuration
+- ng.core.Component extends
+- ng.core.Directive, so the ng.core.Directive configuration applies to components as well
+- Array of dependency injection providers scoped to this component's view.
+```
+viewProviders: [MyService, ng.core.provide(...)]
+```
+- Inline template / external template URL of the component's view.
+```
+template: 'Hello {{name}}'
+templateUrl: 'my-component.html'
+```
+- List of inline CSS styles / external stylesheet URLs for styling component’s view.
+```
+styles: ['.primary {color: red}']
+styleUrls: ['my-component.css']
+```
+- List of directives used in the the component’s template.
+```
+directives: [MyDirective, MyComponent]
+```
+- List of pipes used in the component's template.
+```
+pipes: [MyPipe, OtherPipe]
+```
