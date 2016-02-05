@@ -11,7 +11,7 @@
 #### 5. Multiple componenets and ngFor directive usage
 #### 6. Services (templateUrl, Lifecycle hooks, interface, injectable)
 #### 7. Two-way data binding
-#### 8. Routing (Coming Soon)
+#### 8. Routing 
 #### 9. Data with Service and Routing together   (Coming Soon)
 #### 10. Routing with Parameters   (Coming Soon)
 #### 11. Forms with Two-way data binding   (Coming Soon)
@@ -20,7 +20,7 @@
 #### 14. Pipes   (Coming Soon)
 #### 15. Input /Output   (Coming Soon)
 #### Practice1. ToDO App (In progress and not yet finished)   (under progress)
-#### Practice2. Basic Router Demo App 
+#### Practice2. Basic Router Demo App
 ------
 ##### Author
 ###### Bhavin Patel
