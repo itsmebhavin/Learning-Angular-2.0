@@ -1,0 +1,23 @@
+<h3>Create new contact</h3>
+<h4>Hello New Contact, How are you Today?</h4>
+<div>
+    <table>
+      <tr>
+        <td>First Name</td>
+        <td><input type="text" #firstname /></td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><input type="text" #lastname/></td>
+      </tr>
+      <tr>
+        <td>email address</td>
+        <td><input type="text"  #email/></td>
+      </tr>
+      <tr>
+        <td style.colspan="2">
+          <button (click)="onAddContact(firstname.value,lastname.value,email.value)">Save Contact</button>
+        </td>
+      </tr>
+    </table>
+</div>
