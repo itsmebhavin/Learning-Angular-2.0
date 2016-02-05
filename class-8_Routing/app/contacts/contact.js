@@ -1,1 +1,0 @@
-System.register([],function(e){return{setters:[],execute:function(){}}});
