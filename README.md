@@ -37,7 +37,7 @@ npm install
 ```
 npm start
 ```
-4: Start Gulp Watcher (compile TypeScript and (S)CSS)
+4: Start Gulp Watcher (compile TypeScript(S) and CSS)
 ```
 gulp
 ```
