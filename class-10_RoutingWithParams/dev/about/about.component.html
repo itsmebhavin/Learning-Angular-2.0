@@ -1,0 +1,11 @@
+<h4> About Page</h4>
+<div>
+  <!-- Hello {{_contact.firstname}}, It's Friday!!! -->
+  <label *ngIf="_contact != null">Hello <b>{{_contact.firstname}}</b>, It's Friday!</label>
+</div>
+<div *ngIf="_contact != null">
+   <h4>Your profile information</h4>
+   <div>Name: {{_contact.firstname}} {{_contact.lastname}}</div>
+   <div>AuthId: {{_contact.id}}</div>
+   <div>Email: {{_contact.email}}</div>
+</div>
