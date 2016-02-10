@@ -12,8 +12,8 @@
 #### 6. Services (templateUrl, Lifecycle hooks, interface, injectable)
 #### 7. Two-way data binding
 #### 8. Routing
-#### 9. Data with Service and Routing together 
-#### 10. Routing with Parameters   (Coming Soon)
+#### 9. Data with Service and Routing together
+#### 10. Routing with Parameters   
 #### 11. Forms with Two-way data binding   (Coming Soon)
 #### 12. Forms with FormsBuilder   (Coming Soon)
 #### 13. HTTP (Get, Post to RESTFul services)   (Coming Soon)
