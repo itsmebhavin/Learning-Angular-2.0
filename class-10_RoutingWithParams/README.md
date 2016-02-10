@@ -6,3 +6,6 @@
     - add code to About component script
     - how to consume parameters into destination form.
     - use of ngOnInit()
+    - create new method getContactById in service
+    - inject service in to destination typescript (About), and get contact based on passed parameter.
+    
