@@ -49,3 +49,7 @@ directives: [MyDirective, MyComponent]
 ```
 pipes: [MyPipe, OtherPipe]
 ```
+- Array of dependency injection providers for this directive and its children.
+```
+providers: [MyService, ng.core.provide(...)]
+```
