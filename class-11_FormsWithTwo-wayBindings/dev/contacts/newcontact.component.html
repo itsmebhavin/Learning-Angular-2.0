@@ -1,0 +1,29 @@
+<h3>Create new contact</h3>
+<h4>Hello New Contact, How are you Today?</h4>
+<form #myForm = "ngForm" (ngSubmit)="onAddContact()"> <!-- myForms holds ref. to our ngForm -->
+    <table>
+      <tr>
+        <td>First Name</td>
+        <td><input type="text" ngControl="firstName" [(ngModel)]="newContact.firstname" required/></td>
+        <!-- adding ngControl , will add that textBox to ngForm and it will participate in ngForm -->
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><input type="text" ngControl="lastName" [(ngModel)]="newContact.lastname" required/></td>
+      </tr>
+      <tr>
+        <td>email address</td>
+        <td><input type="text"  ngControl="email" [(ngModel)]="newContact.email"/></td>
+      </tr>
+      <tr>
+        <td style.colspan="2">
+          <button type="submit">Save Contact</button>
+        </td>
+      </tr>
+    </table>
+</form>
+<!--
+ng-pristine
+ng-invalid
+ng-touched
+-->
