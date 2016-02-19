@@ -14,11 +14,14 @@
 #### 8. Routing
 #### 9. Data with Service and Routing together
 #### 10. Routing with Parameters
-#### 11. Forms with Two-way data binding   (Coming Soon)
+#### 11. Forms with Two-way data binding   (two part example)
 #### 12. Forms with FormsBuilder   (Coming Soon)
 #### 13. HTTP (Get, Post to RESTFul services)   (Coming Soon)
 #### 14. Pipes   (Coming Soon)
 #### 15. Input /Output   (Coming Soon)
+#### 16. Dependency Injection I  (Coming Soon)
+#### 17. Dependency Injection II  (Coming Soon)
+
 #### Practice1. ToDO App (In progress and not yet finished)   (under progress)
 #### Practice2. Basic Router Demo App
 ------
