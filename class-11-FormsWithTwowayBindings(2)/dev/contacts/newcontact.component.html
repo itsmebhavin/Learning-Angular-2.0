@@ -1,0 +1,73 @@
+<h3>Create new contact</h3>
+<h4>Hello New Contact, How are you Today?</h4>
+<form (ngSubmit)="onAddContact()"> <!-- myForms holds ref. to our ngForm -->
+    <table  style="border: 0px">
+      <tr>
+        <td>First Name</td>
+        <td><input type="text"
+          ngControl="firstName"
+          [(ngModel)]="newContact.firstname"
+          #firstname="ngForm"
+          required/>
+        </td>
+        <!-- adding ngControl , will add that textBox to ngForm and it will participate in ngForm -->
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td><input type="text"
+          ngControl="lastName"
+          [(ngModel)]="newContact.lastname"
+          #lastname="ngForm"
+          required/>
+        </td>
+      </tr>
+      <tr>
+        <td>email Address</td>
+        <td><input type="text"
+          ngControl="email"
+          [(ngModel)]="newContact.email"
+          #email="ngForm"
+          />
+        </td>
+
+      </tr>
+      <tr>
+        <td style.colspan="2">
+          <button type="submit">Save Contact</button>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <table style="border: 1px solid black;">
+      <tr>
+        <td>Field</td>
+        <td>ng-touched</td>
+        <td>ng-pristine</td>
+        <td>ng-valid</td>
+      </tr>
+      <tr>
+        <td>First Name</td>
+        <td>{{firstname.touched}}</td>
+        <td>{{firstname.pristine}}</td>
+        <td>{{firstname.valid}}</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>{{lastname.touched}}</td>
+        <td>{{lastname.pristine}}</td>
+        <td>{{lastname.valid}}</td>
+      </tr>
+      <tr>
+        <td>eMail</td>
+        <td>{{email.touched}}</td>
+        <td>{{email.pristine}}</td>
+        <td>{{email.valid}}</td>
+      </tr>
+    </table>
+</form>
+
+<!--
+ng-pristine
+ng-invalid
+ng-touched
+-->
