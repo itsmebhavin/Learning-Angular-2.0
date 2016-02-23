@@ -1,4 +1,4 @@
-System.register(["angular2/core", "./contact.service", 'angular2/router'], function(exports_1) {
+System.register(["angular2/core", "./contact.service", 'angular2/router', 'angular2/common'], function(exports_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,7 +9,7 @@ System.register(["angular2/core", "./contact.service", 'angular2/router'], funct
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, contact_service_1, router_1;
+    var core_1, contact_service_1, router_1, common_1;
     var NewContactComponent;
     return {
         setters:[
@@ -21,14 +21,24 @@ System.register(["angular2/core", "./contact.service", 'angular2/router'], funct
             },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
             }],
         execute: function() {
             NewContactComponent = (function () {
-                function NewContactComponent(_contactService, _router) {
+                function NewContactComponent(_contactService, _router, _formBuilder) {
                     this._contactService = _contactService;
                     this._router = _router;
+                    this._formBuilder = _formBuilder;
                     //initialize newContact to empty object
-                    this.newContact = { id: '', firstname: '', lastname: '', email: '' };
+                    this.myForm = this._formBuilder.group({
+                        //This should match with Contact.ts object
+                        'id': [Math.floor((Math.random() * 100) + 1).toString()],
+                        'firstname': ['', common_1.Validators.required],
+                        'lastname': ['', common_1.Validators.required],
+                        'email': ['']
+                    });
                 }
                 // onAddContact(_firstname, _lastname, _email){
                 //   var _id =  Math.floor((Math.random() * 100) + 1).toString();
@@ -37,10 +47,11 @@ System.register(["angular2/core", "./contact.service", 'angular2/router'], funct
                 //   //navigate to contacts page once insert
                 //   this._router.navigate(['Contacts']);
                 // }
-                NewContactComponent.prototype.onAddContact = function () {
-                    this.newContact.id = Math.floor((Math.random() * 100) + 1).toString();
-                    console.log(this.newContact);
-                    this._contactService.insertContact(this.newContact);
+                NewContactComponent.prototype.onAddContact = function (value) {
+                    console.log("Submitted value");
+                    console.log(value);
+                    if (this.myForm.dirty && this.myForm.valid)
+                        this._contactService.insertContact(value);
                     this._router.navigate(['Contacts']);
                 };
                 NewContactComponent = __decorate([
@@ -49,7 +60,7 @@ System.register(["angular2/core", "./contact.service", 'angular2/router'], funct
                         providers: [contact_service_1.ContactService],
                         styles: ["\n      .ng-invalid{\n        border:1px solid red;\n      }\n      table {\n        border-collapse: collapse;\n      }\n      table, th, td {\n        border: 1px solid black;\n      }\n    "]
                     }), 
-                    __metadata('design:paramtypes', [contact_service_1.ContactService, router_1.Router])
+                    __metadata('design:paramtypes', [contact_service_1.ContactService, router_1.Router, common_1.FormBuilder])
                 ], NewContactComponent);
                 return NewContactComponent;
             }());

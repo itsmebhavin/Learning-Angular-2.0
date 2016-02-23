@@ -1,4 +1,23 @@
-### Class-12 Angular Form Builder
+# Class-12 Angular Form Builder (Model driven form instead of template driven)
+- creating forms programatically and binding it to proper object's property
 - how to use ControlGroup for Form Builder
 - how to use Validators enum to build form object to define html5 validations
 - added [disabled] to submit button which will disable that button until form becomes valid form with all required entries
+- we will check basic following validations as well
+    - touched or untouched
+    - valid or invalid
+    - pristine or dirty
+- Building our Controls and ControlGroups implicitly using ngForm and ngControl is convenient, but doesn't give us a lot of customization options. A more flexible and common way to configure forms is to use a FormBuilder.
+- FormBuilder is an aptly-named helper class that helps us build forms. As you recall, forms are made up of Controls and ControlGroups and the FormBuilder helps us make them (you can think of it as a "factory" object).
+- There are two main functions we'll use on FormBuilder:
+    - control - creates a new Control
+    - group - creates a new ControlGroup
+- in our example - myForm is typed to be a ControlGroup. We create a ControlGroup by calling fb.group(). ".group"  takes an object of key-value pairs that specify the Controls in this group.
+- To create a new ControlGroup and Controls implicitly use:
+    - ngForm
+    - ngControl
+- But to bind to an existing ControlGroup and Controls use:
+    - ngFormModel
+    - ngFormControl
+
+- For more information - http://blog.ng-book.com/the-ultimate-guide-to-forms-in-angular-2/

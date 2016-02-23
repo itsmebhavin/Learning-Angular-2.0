@@ -1,37 +1,31 @@
 <h3>Create new contact</h3>
 <h4>Hello New Contact, How are you Today?</h4>
-<form #myForm="ngForm" (ngSubmit)="onAddContact()"> <!-- myForms holds ref. to our ngForm -->
+
+<!-- Tip: [] always shows that something is flowing to this template or element -->
+<form [ngFormModel]="myForm" (ngSubmit)="onAddContact(myForm.value)" novalidate> <!-- myForms holds ref. to our ngForm -->
     <table  style="border: 0px">
       <tr>
         <td>First Name</td>
-        <td><input type="text"
-          ngControl="firstName"
-          [(ngModel)]="newContact.firstname"
-          #firstname="ngForm"
-          required/>
-          <span *ngIf="!firstname.valid">Not Valid</span>
+        <td><input type="text" placeholder="First Name"
+          [ngFormControl] = "myForm.controls['firstname']"
+          #firstName="ngForm"/>
+          <span [hidden]="firstName.valid">Not Valid</span>
         </td>
         <!-- adding ngControl , will add that textBox to ngForm and it will participate in ngForm -->
       </tr>
       <tr>
         <td>Last Name</td>
-        <td><input type="text"
-          ngControl="lastName"
-          [(ngModel)]="newContact.lastname"
-          #lastname="ngForm"
-          required/>
-          <span *ngIf="!lastname.valid">Not Valid</span>
+        <td><input type="text" placeholder="Last Name"
+          [ngFormControl] ="myForm.controls['lastname']"
+          #lastName="ngForm"/>
+          <span [hidden]="lastName.valid">Not Valid</span>
         </td>
       </tr>
       <tr>
         <td>email Address</td>
-        <td><input type="text"
-          ngControl="email"
-          [(ngModel)]="newContact.email"
-          #email="ngForm"
-          />
+        <td><input type="text" placeholder="EMail Address"
+          [ngFormControl] = "myForm.controls['email']" />
         </td>
-
       </tr>
       <tr>
         <td style.colspan="2">
@@ -49,21 +43,15 @@
       </tr>
       <tr>
         <td>First Name</td>
-        <td>{{firstname.touched}}</td>
-        <td>{{firstname.pristine}}</td>
-        <td>{{firstname.valid}}</td>
+        <td>{{firstName.touched}}</td>
+        <td>{{firstName.pristine}}</td>
+        <td>{{firstName.valid}}</td>
       </tr>
       <tr>
         <td>Last Name</td>
-        <td>{{lastname.touched}}</td>
-        <td>{{lastname.pristine}}</td>
-        <td>{{lastname.valid}}</td>
-      </tr>
-      <tr>
-        <td>eMail</td>
-        <td>{{email.touched}}</td>
-        <td>{{email.pristine}}</td>
-        <td>{{email.valid}}</td>
+        <td>{{lastName.touched}}</td>
+        <td>{{lastName.pristine}}</td>
+        <td>{{lastName.valid}}</td>
       </tr>
     </table>
 </form>

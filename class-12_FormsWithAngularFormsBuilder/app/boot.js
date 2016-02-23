@@ -1,1 +1,1 @@
-System.register(["angular2/platform/browser","./app.component","angular2/router"],function(n){var t,o,r;return{setters:[function(n){t=n},function(n){o=n},function(n){r=n}],execute:function(){t.bootstrap(o.AppComponent,[r.ROUTER_PROVIDERS])}}});
+System.register(["angular2/platform/browser","./app.component","angular2/router","angular2/common"],function(n){var t,o,r,e;return{setters:[function(n){t=n},function(n){o=n},function(n){r=n},function(n){e=n}],execute:function(){t.bootstrap(o.AppComponent,[r.ROUTER_PROVIDERS,e.FORM_PROVIDERS])}}});

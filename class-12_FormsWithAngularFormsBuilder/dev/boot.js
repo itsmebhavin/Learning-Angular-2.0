@@ -1,6 +1,6 @@
-System.register(['angular2/platform/browser', "./app.component", 'angular2/router'], function(exports_1) {
+System.register(['angular2/platform/browser', "./app.component", 'angular2/router', 'angular2/common'], function(exports_1) {
     "use strict";
-    var browser_1, app_component_1, router_1;
+    var browser_1, app_component_1, router_1, common_1;
     return {
         setters:[
             function (browser_1_1) {
@@ -11,10 +11,13 @@ System.register(['angular2/platform/browser', "./app.component", 'angular2/route
             },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (common_1_1) {
+                common_1 = common_1_1;
             }],
         execute: function() {
             //noinspection TypeScriptValidateTypes
-            browser_1.bootstrap(app_component_1.AppComponent, [router_1.ROUTER_PROVIDERS]);
+            browser_1.bootstrap(app_component_1.AppComponent, [router_1.ROUTER_PROVIDERS, common_1.FORM_PROVIDERS]);
         }
     }
 });
