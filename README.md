@@ -15,8 +15,8 @@
 #### 9. Data with Service and Routing together
 #### 10. Routing with Parameters
 #### 11. Forms with Two-way data binding   (two part example)
-#### 12. Forms with FormsBuilder 
-#### 13. HTTP (Get, Post to RESTFul services)   (Coming Soon)
+#### 12. Forms with FormsBuilder
+#### 13. HTTP (Get, Post to RESTFul services, observables)
 #### 14. Pipes   (Coming Soon)
 #### 15. Input /Output   (Coming Soon)
 #### 16. Dependency Injection I  (Coming Soon)
