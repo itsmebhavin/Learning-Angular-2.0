@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <base href="/">
+    <title>Angular 2 QuickStart</title>
+
+    <!-- 1. Load libraries -->
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+    <!-- Http is not part of the Angular core.
+      It's an optional service in its own angular2/http library.
+      Moreover, this library isn't even part of the main Angular script file.
+      It's in its own script file (included in the Angular npm bundle) which we must load in index.html. -->
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script>
+        System.config({
+            packages: {
+                'app': {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+            },
+        });
+        System.import('app/boot')
+                .then(null, console.error.bind(console));
+    </script>
+    <link rel="stylesheet" href="src/css/app.css">
+</head>
+<body>
+<app>Loading...</app>
+</body>
+
+</html>
