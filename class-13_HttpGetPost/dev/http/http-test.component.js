@@ -29,6 +29,12 @@ System.register(['angular2/core', './http-test.service'], function(exports_1) {
                     console.log('Getting user now.');
                     this._httpService.getUser().subscribe(function (data) { return _this.getData = JSON.stringify(data); }, function (error) { return alert(error); }, function () { return console.log('Finished Get'); });
                 };
+                HTTPTestComponent.prototype.onPromiseGet = function () {
+                    var _this = this;
+                    console.log('Getting user based on promise now.');
+                    this._httpService.getUsersByPromise()
+                        .then(function (res) { return _this.getPromiseData = JSON.stringify(res); }, function (err) { return alert(err); });
+                };
                 HTTPTestComponent.prototype.onPost = function () {
                     var _this = this;
                     this._httpService.postJson().subscribe(function (data) { return _this.postData = JSON.stringify(data); }, function (error) { return alert(error); }, function () { return console.log('Finished Post'); });
@@ -36,7 +42,7 @@ System.register(['angular2/core', './http-test.service'], function(exports_1) {
                 HTTPTestComponent = __decorate([
                     core_1.Component({
                         selector: 'http-test',
-                        template: "\n    <button (click)=\"onGet()\">Get Data</button><br/>\n    <div>Output:{{getData}}</div><br/>\n    <button (click) = \"onPost()\">Post Data</button><br/>\n    <div>Output:{{postData}}</div><br/>\n  ",
+                        template: "\n    <button (click)=\"onGet()\">Get Data</button><br/>\n    <div>Output:{{getData}}</div><br/>\n    <button (click) = \"onPost()\">Post Data</button><br/>\n    <div>Output:{{postData}}</div><br/>\n    <button (click) = \"onPromiseGet()\">Get Data(w Promise)</button><br/>\n    <div>Output:{{getPromiseData}}</div><br/>\n  ",
                         providers: [http_test_service_1.HTTPTestService]
                     }), 
                     __metadata('design:paramtypes', [http_test_service_1.HTTPTestService])

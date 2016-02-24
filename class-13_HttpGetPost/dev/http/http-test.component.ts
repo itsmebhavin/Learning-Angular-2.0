@@ -8,12 +8,15 @@ import {HTTPTestService} from './http-test.service';
     <div>Output:{{getData}}</div><br/>
     <button (click) = "onPost()">Post Data</button><br/>
     <div>Output:{{postData}}</div><br/>
+    <button (click) = "onPromiseGet()">Get Data(w Promise)</button><br/>
+    <div>Output:{{getPromiseData}}</div><br/>
   `,
   providers:[HTTPTestService]
 })
 
 export class HTTPTestComponent{
   getData:string;
+  getPromiseData:string;
   postData:string;
 
   constructor(private _httpService:HTTPTestService){}
@@ -27,6 +30,16 @@ export class HTTPTestComponent{
     );
   }
 
+  onPromiseGet(){
+    console.log('Getting user based on promise now.');
+    this._httpService.getUsersByPromise()
+      .then(
+        res=>this.getPromiseData = JSON.stringify(res),
+        err=>alert(err)
+    );
+
+  }
+
   onPost(){
     this._httpService.postJson().subscribe(
       data =>this.postData = JSON.stringify(data),
@@ -34,6 +47,7 @@ export class HTTPTestComponent{
       ()=>console.log('Finished Post')
     );
   }
+
 
 
 }

@@ -2,7 +2,8 @@ import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
 import 'rxjs/add/operator/map';
 import {Headers} from 'angular2/http';
-
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/Rx';
 
 @Injectable()
 export class HTTPTestService{
@@ -28,4 +29,9 @@ export class HTTPTestService{
       .map(res => res.json());
     };
 
+    getUsersByPromise(){
+      return this._http.get("http://jsonplaceholder.typicode.com/users")
+      .toPromise()
+      .then(res=>res.json());
+    }
 }

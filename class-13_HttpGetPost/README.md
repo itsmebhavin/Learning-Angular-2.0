@@ -26,6 +26,8 @@
       this.http.get('./customer.json').map((res: Response) => res.json())
     ).subscribe(res => this.combined = {friends:res[0].friends, customer:res[1]});
 ```
+- Import following
+  -  import 'rxjs/add/operator/map';
 ##### Promises
 - Angular 2.0 has moved in the direction of Observables but it's still possible to work with promises if that is your preference. Here is a quick sample where I show how to make an http request using a promise.
 ```
@@ -33,4 +35,23 @@
         .then((res: Response) => {
             this.friendsAsPromise.friends = res.json().friends;
         });
+```
+- Import following
+  - import {Observable} from 'rxjs/Observable';
+  - import 'rxjs/Rx';
+##### Promises vs Observables
+```
+--promise
+findAll() {
+   return this.http.get(propertiesURL)
+       .toPromise()
+       .then(res => res.json(), err => console.log(err));
+}
+```
+and
+```
+--observable
+ngOnInit() {
+   this.propertyService.findAll().then(data => this.properties = data);
+}
 ```
