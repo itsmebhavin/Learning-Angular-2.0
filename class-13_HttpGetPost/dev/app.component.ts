@@ -3,7 +3,7 @@ import {ContactListComponent} from './contacts/contact-list.component';
 import {AboutComponent} from './about/about.component';
 import {NewContactComponent} from './contacts/newcontact.component';
 import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
-import {HTTPTestComponent} from './http-test.component';
+import {HTTPTestComponent} from './http/http-test.component';
 
 @Component({
     selector: 'app'
