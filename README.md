@@ -1,8 +1,7 @@
 #### Angular 2.0 2016 Learning Series
 (inspired from original Mindspace video series at https://www.youtube.com/playlist?list=PL55RiY5tL51olfU2IEqr455EYLkrhmh3n)
 
-###### **** Under Development **** 
-## (Remaining development will start in April, 2016)
+###### **** Under No Further Development **** 
 
 ### Chapters
 #### 1. Introduction
@@ -18,13 +17,6 @@
 #### 11. Forms with Two-way data binding   (two part example)
 #### 12. Forms with FormsBuilder
 #### 13. HTTP (GET/POST With RESTFul services, observables, Promise)
-#### 14. Pipes   (Coming Soon)
-#### 15. Input /Output   (Coming Soon)
-#### 16. Dependency Injection I  (Coming Soon)
-#### 17. Dependency Injection II  (Coming Soon)
-
-#### Practice1. ToDO App (In progress and not yet finished)   (under progress)
-#### Practice2. Basic Router Demo App
 ------
 
 ## Usage
