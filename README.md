@@ -1,6 +1,10 @@
 #### Angular 2.0 2016 Learning Series
 (inspired from original Mindspace video series at https://www.youtube.com/playlist?list=PL55RiY5tL51olfU2IEqr455EYLkrhmh3n)
 
+```
+Updated tutorial link - https://www.youtube.com/watch?v=DBjPIabiRNg
+```
+
 ###### **** Under No Further Development **** 
 
 ### Chapters
